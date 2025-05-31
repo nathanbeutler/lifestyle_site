@@ -1,0 +1,20 @@
+<h2>Workout Planner</h2>
+<form method="POST">
+  <label>Goal:</label>
+  <select name="goal">
+    <option value="lose">Lose Weight</option>
+    <option value="maintain">Maintain Weight</option>
+    <option value="gain">Gain Muscle</option>
+  </select>
+  <br/>
+  <label>Equipment:</label>
+  <select name="type">
+    <option value="gym">Gym</option>
+    <option value="calisthenics">Calisthenics</option>
+  </select>
+  <br/>
+  <input type="submit" value="Get Plan"/>
+</form>
+{% if plan %}
+<p><strong>Recommended Plan:</strong> {{ plan }}</p>
+{% endif %}
